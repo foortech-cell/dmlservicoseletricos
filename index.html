@@ -65,10 +65,10 @@
 
   <main>
     <section id="topo" class="hero">
-      <div class="hero-block" aria-hidden="true"></div>
-      <svg class="bolt-bg" viewBox="0 0 100 140" aria-hidden="true">
-        <path class="bolt-flicker" d="M56 4 14 78h28l-8 58 50-84H56l8-48z"/>
-      </svg>
+      <div class="hero-deco circle" style="width:120px;height:120px;top:14%;left:2%"></div>
+      <div class="hero-deco plus" style="width:16px;height:16px;top:60%;left:6%"></div>
+      <div class="hero-deco tri" style="top:22%;right:6%"></div>
+      <div class="hero-deco plus" style="width:16px;height:16px;top:10%;right:14%"></div>
       <div class="wrap hero-grid">
         <div>
           <span class="eyebrow" data-reveal-hero-item style="transition-delay:0s"><span class="pulse-dot"></span> PLANTÃO 24H · FAZENDA RIO GRANDE E REGIÃO</span>
@@ -80,73 +80,72 @@
           </div>
         </div>
         <div class="hero-visual" data-reveal-hero-panel>
-          <div class="hero-visual-card cut-lg">
-            <div class="hero-visual-glow"></div>
+          <div class="hero-visual-card">
             <img src="/images/logo.png" alt="DML Serviços Elétricos" width="900" height="514" loading="eager" decoding="sync" fetchpriority="high">
+            <div class="hero-visual-badge">
+              <span class="pulse-dot"></span>
+              <div><strong>24h</strong><span>Plantão de emergência</span></div>
+            </div>
           </div>
         </div>
       </div>
       <div class="wrap">
         <div class="hero-ticker" data-reveal-hero-item style="transition-delay:.65s">
           <div class="ticker-item"><strong data-count="5" data-suffix="+">0+</strong><span>Anos de experiência</span></div>
-          <span class="ticker-bolt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg></span>
+          <span class="ticker-sep"></span>
           <div class="ticker-item"><strong>24h</strong><span>Plantão de emergência</span></div>
+          <span class="ticker-sep"></span>
+          <div class="ticker-item"><strong>Fazenda Rio Grande</strong><span>E região</span></div>
         </div>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
-    <section id="servicos">
+    <section id="servicos" class="band-dark">
       <div class="wrap">
         <div class="section-head" data-reveal><span class="kicker">SERVIÇOS</span><h2>Tudo que sua instalação elétrica precisa, em um só lugar.</h2><p>Da instalação nova ao reparo de emergência, cada serviço segue as normas técnicas e boas práticas do setor.</p></div>
-        <div class="grid cards-3" data-reveal-group>
-          <article class="card cut-lg"><div class="icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></svg></div><h3>Instalações elétricas</h3><p>Projetos residenciais e comerciais completos, do ponto de luz ao circuito dedicado, dentro das normas.</p></article>
-          <article class="card cut-lg"><div class="icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 4v3M15 4v3M9 17v3M15 17v3M4 9h3M4 15h3M17 9h3M17 15h3"/></svg></div><h3>Quadros de distribuição</h3><p>Troca e dimensionamento de disjuntores, quadros e aterramento para evitar sobrecarga e curto-circuito.</p></article>
-          <article class="card cut-lg"><div class="icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.8-2.8z"/></svg></div><h3>Manutenção preventiva</h3><p>Inspeção periódica que identifica riscos antes de virarem problema.</p></article>
-          <article class="card cut-lg"><div class="icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg></div><h3>Iluminação e automação</h3><p>Troca para LED, sensores de presença e automações simples para economizar energia no dia a dia.</p></article>
-          <article class="card cut-lg"><div class="icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 20h20L12 2z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div><h3>Emergência 24 horas</h3><p>Falta de energia, cheiro de queimado ou choque em tomada: atendimento rápido a qualquer hora.</p></article>
+        <div class="grid services-grid" data-reveal-group>
+          <article class="service-card"><img src="/images/projetos/iluminacao-fachada-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Instalação elétrica residencial" loading="lazy"><span class="service-card-num">01</span><div class="service-card-body"><h3>Instalações elétricas</h3><p>Projetos residenciais e comerciais completos, dentro das normas.</p></div></article>
+          <article class="service-card"><img src="/images/projetos/quadro-eletrico-trifasico-fazenda-rio-grande-01-thumb.jpg" alt="Quadro de distribuição elétrica" loading="lazy"><span class="service-card-num">02</span><div class="service-card-body"><h3>Quadros de distribuição</h3><p>Troca e dimensionamento de disjuntores e aterramento.</p></div></article>
+          <article class="service-card"><img src="/images/projetos/quadro-eletrico-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Manutenção elétrica preventiva" loading="lazy"><span class="service-card-num">03</span><div class="service-card-body"><h3>Manutenção preventiva</h3><p>Inspeção que identifica riscos antes de virarem problema.</p></div></article>
+          <article class="service-card"><img src="/images/projetos/instalacao-lustre-decorativo-fazenda-rio-grande-01-thumb.jpg" alt="Iluminação e automação residencial" loading="lazy"><span class="service-card-num">04</span><div class="service-card-body"><h3>Iluminação e automação</h3><p>Troca para LED e automações simples para economizar energia.</p></div></article>
+          <article class="service-card"><img src="/images/projetos/fachada-residencial-noturna-fazenda-rio-grande-01-thumb.jpg" alt="Atendimento elétrico de emergência 24 horas" loading="lazy"><span class="service-card-num">05</span><div class="service-card-body"><h3>Emergência 24 horas</h3><p>Falta de energia ou choque em tomada: atendimento a qualquer hora.</p></div></article>
         </div>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
-    <section id="diferenciais" class="grid-texture">
-      <div class="wrap diferenciais-grid">
-        <div>
-          <div class="section-head" data-reveal><span class="kicker">POR QUE O DML</span><h2>Segurança elétrica não é detalhe, é prioridade.</h2></div>
-          <div class="differentials-list" data-reveal-group>
-            <div class="differential"><div class="diff-icon cut-sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3>Atendimento cuidadoso</h3><p>Trabalho feito com atenção e responsabilidade, não na base do improviso.</p></div></div>
-            <div class="differential"><div class="diff-icon cut-sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div><div><h3>Diagnóstico transparente</h3><p>Você aprova o orçamento antes de qualquer execução.</p></div></div>
-            <div class="differential"><div class="diff-icon cut-sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 12 16 8"/><path d="M8 12a4 4 0 0 1 4-4"/></svg></div><div><h3>Material de qualidade</h3><p>Sem gambiarra: componentes com procedência.</p></div></div>
-          </div>
-        </div>
-        <div class="grid stats-grid" data-reveal-group>
-          <div class="card cut-lg stat-card"><div class="stat-value" data-count="5" data-suffix="+">0+</div><div class="muted">Anos de experiência</div></div>
-          <div class="card cut-lg stat-card"><div class="stat-value">24h</div><div class="muted">Plantão de emergência</div></div>
+    <section id="diferenciais">
+      <div class="wrap">
+        <div class="section-head" data-reveal><span class="kicker">POR QUE O DML</span><h2>Segurança elétrica não é detalhe, é prioridade.</h2></div>
+        <div class="grid feature-grid" data-reveal-group>
+          <article class="card feature-card"><div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Atendimento cuidadoso</h3><p>Trabalho feito com atenção e responsabilidade, não na base do improviso.</p></article>
+          <article class="card feature-card"><div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div><h3>Diagnóstico transparente</h3><p>Você aprova o orçamento antes de qualquer execução.</p></article>
+          <article class="card feature-card"><div class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 12 16 8"/><path d="M8 12a4 4 0 0 1 4-4"/></svg></div><h3>Material de qualidade</h3><p>Sem gambiarra: componentes com procedência.</p></article>
         </div>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
-    <section id="processo">
+    <section id="processo" class="band-dark">
       <div class="wrap">
         <div class="section-head" data-reveal><span class="kicker">COMO FUNCIONA</span><h2>Do chamado à entrega, sem enrolação.</h2></div>
         <div class="process-wrap" id="process-wrap">
           <svg class="process-line" height="4" preserveAspectRatio="none" viewBox="0 0 1000 4" aria-hidden="true">
-            <path d="M0 2 H1000" stroke="rgba(240,146,31,.14)" stroke-width="2"/>
+            <path d="M0 2 H1000" stroke="rgba(249,194,60,.18)" stroke-width="2"/>
             <path id="process-progress" d="M0 2 H1000" stroke="var(--volt)" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000"/>
           </svg>
           <div class="process-line-v" id="process-line-v"><div class="process-line-v-fill" id="process-line-v-fill"></div></div>
         <div class="grid cards-4 process" data-reveal-group>
-          <article class="card cut-lg"><div class="step-icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><span class="step-num">PASSO 01</span><h3>Chamado</h3><p>Você chama no WhatsApp e explica o problema ou o que precisa instalar.</p></article>
-          <article class="card cut-lg"><div class="step-icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V2h6v2"/><path d="m9 13 2 2 4-4"/></svg></div><span class="step-num">PASSO 02</span><h3>Diagnóstico</h3><p>Avaliação no local e orçamento claro, sem letra miúda.</p></article>
-          <article class="card cut-lg"><div class="step-icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.8-2.8z"/></svg></div><span class="step-num">PASSO 03</span><h3>Execução</h3><p>Serviço feito com segurança, material de qualidade e organização.</p></article>
-          <article class="card cut-lg"><div class="step-icon cut-md"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div><span class="step-num">PASSO 04</span><h3>Conclusão</h3><p>Serviço entregue organizado, com suporte se precisar de algo depois.</p></article>
+          <article class="card"><div class="step-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><span class="step-num">PASSO 01</span><h3>Chamado</h3><p>Você chama no WhatsApp e explica o problema ou o que precisa instalar.</p></article>
+          <article class="card"><div class="step-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V2h6v2"/><path d="m9 13 2 2 4-4"/></svg></div><span class="step-num">PASSO 02</span><h3>Diagnóstico</h3><p>Avaliação no local e orçamento claro, sem letra miúda.</p></article>
+          <article class="card"><div class="step-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.8-2.8z"/></svg></div><span class="step-num">PASSO 03</span><h3>Execução</h3><p>Serviço feito com segurança, material de qualidade e organização.</p></article>
+          <article class="card"><div class="step-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div><span class="step-num">PASSO 04</span><h3>Conclusão</h3><p>Serviço entregue organizado, com suporte se precisar de algo depois.</p></article>
         </div>
+        </div>
+        <div class="grid stats-band" data-reveal-group>
+          <div class="card stat-card"><div class="stat-value" data-count="5" data-suffix="+">0+</div><div class="muted">Anos de experiência</div></div>
+          <div class="card stat-card"><div class="stat-value">24h</div><div class="muted">Plantão de emergência</div></div>
         </div>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
     <section id="projetos">
       <div class="wrap">
@@ -155,21 +154,20 @@
           <button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="residencial">Residencial</button><button class="filter" data-filter="comercial">Comercial</button><button class="filter" data-filter="iluminacao">Iluminação LED</button><button class="filter" data-filter="quadro">Quadros Elétricos</button>
         </div>
         <div class="grid gallery" data-reveal-group>
-          <button class="photo cut-md" data-cat="quadro" data-full="/images/projetos/quadro-eletrico-trifasico-fazenda-rio-grande-01.jpg"><img src="/images/projetos/quadro-eletrico-trifasico-fazenda-rio-grande-01-thumb.jpg" alt="Quadro elétrico trifásico organizado - serviço do DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="residencial" data-full="/images/projetos/iluminacao-fachada-residencial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/iluminacao-fachada-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Iluminação de fachada residencial instalada pelo DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="comercial" data-full="/images/projetos/instalacao-iluminacao-comercial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-comercial-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação em loja comercial em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="quadro" data-full="/images/projetos/quadro-eletrico-residencial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/quadro-eletrico-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Quadro elétrico residencial com circuitos identificados em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="iluminacao" data-full="/images/projetos/instalacao-lustre-decorativo-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-lustre-decorativo-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de lustre decorativo residencial em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="comercial" data-full="/images/projetos/instalacao-iluminacao-industrial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-industrial-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação industrial em galpão em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="quadro" data-full="/images/projetos/padrao-entrada-eletrica-fazenda-rio-grande-01.jpg"><img src="/images/projetos/padrao-entrada-eletrica-fazenda-rio-grande-01-thumb.jpg" alt="Padrão de entrada de energia instalado pelo DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="iluminacao" data-full="/images/projetos/instalacao-pendentes-decorativos-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-pendentes-decorativos-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de pendentes decorativos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="residencial" data-full="/images/projetos/fachada-residencial-noturna-fazenda-rio-grande-01.jpg"><img src="/images/projetos/fachada-residencial-noturna-fazenda-rio-grande-01-thumb.jpg" alt="Iluminação externa residencial finalizada em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="iluminacao" data-full="/images/projetos/instalacao-iluminacao-jardim-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-jardim-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação de jardim em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
-          <button class="photo cut-md" data-cat="iluminacao" data-full="/images/projetos/instalacao-iluminacao-sanca-led-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-sanca-led-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de fita de LED em sanca de gesso em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="quadro" data-full="/images/projetos/quadro-eletrico-trifasico-fazenda-rio-grande-01.jpg"><img src="/images/projetos/quadro-eletrico-trifasico-fazenda-rio-grande-01-thumb.jpg" alt="Quadro elétrico trifásico organizado - serviço do DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="residencial" data-full="/images/projetos/iluminacao-fachada-residencial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/iluminacao-fachada-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Iluminação de fachada residencial instalada pelo DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="comercial" data-full="/images/projetos/instalacao-iluminacao-comercial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-comercial-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação em loja comercial em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="quadro" data-full="/images/projetos/quadro-eletrico-residencial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/quadro-eletrico-residencial-fazenda-rio-grande-01-thumb.jpg" alt="Quadro elétrico residencial com circuitos identificados em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="iluminacao" data-full="/images/projetos/instalacao-lustre-decorativo-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-lustre-decorativo-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de lustre decorativo residencial em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="comercial" data-full="/images/projetos/instalacao-iluminacao-industrial-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-industrial-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação industrial em galpão em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="quadro" data-full="/images/projetos/padrao-entrada-eletrica-fazenda-rio-grande-01.jpg"><img src="/images/projetos/padrao-entrada-eletrica-fazenda-rio-grande-01-thumb.jpg" alt="Padrão de entrada de energia instalado pelo DML Serviços Elétricos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="iluminacao" data-full="/images/projetos/instalacao-pendentes-decorativos-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-pendentes-decorativos-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de pendentes decorativos em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="residencial" data-full="/images/projetos/fachada-residencial-noturna-fazenda-rio-grande-01.jpg"><img src="/images/projetos/fachada-residencial-noturna-fazenda-rio-grande-01-thumb.jpg" alt="Iluminação externa residencial finalizada em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="iluminacao" data-full="/images/projetos/instalacao-iluminacao-jardim-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-jardim-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de iluminação de jardim em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
+          <button class="photo" data-cat="iluminacao" data-full="/images/projetos/instalacao-iluminacao-sanca-led-fazenda-rio-grande-01.jpg"><img src="/images/projetos/instalacao-iluminacao-sanca-led-fazenda-rio-grande-01-thumb.jpg" alt="Instalação de fita de LED em sanca de gesso em Fazenda Rio Grande" loading="lazy" decoding="async"></button>
         </div>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
     <section id="faq">
       <div class="wrap faq-layout">
@@ -180,27 +178,26 @@
           <div class="faq-item"><button class="faq-q">Os serviços prestados possuem garantia?<span>+</span></button><div class="faq-a">Trabalhamos com atenção às boas práticas técnicas e de segurança do setor elétrico, buscando sempre entregar um serviço de qualidade e durável.</div></div>
           <div class="faq-item"><button class="faq-q">Vocês realizam serviços comerciais ou apenas residenciais?<span>+</span></button><div class="faq-a">Atendemos ambos os setores! Realizamos desde pequenos reparos e instalações em residências até reformas completas de quadros e iluminação em lojas e estabelecimentos comerciais.</div></div>
         </div>
-        <aside class="card cut-lg dispatch" data-reveal>
+        <aside class="card dispatch" data-reveal>
           <h3>Área de atendimento</h3>
           <p class="muted">Fazenda Rio Grande e região próxima.</p>
-          <div class="status-badge cut-sm"><span class="pulse-dot"></span><span><b>Eletricista local de plantão</b> nos bairros listados abaixo.</span></div>
+          <div class="status-badge"><span class="pulse-dot"></span><span><b>Eletricista local de plantão</b> nos bairros listados abaixo.</span></div>
           <span class="kicker small">BAIRROS ATENDIDOS EM FRG</span>
           <div class="list"><span>Centro</span><span>Nações</span><span>Eucaliptos</span><span>Gralha Azul</span><span>Estados</span><span>Iguaçu</span><span>Santa Terezinha</span><span>Pioneiros</span><span>Greenfield</span></div>
           <span class="kicker small">OUTRAS REGIÕES ATENDIDAS</span>
           <div class="list one-col"><span>Curitiba (Zona Sul)</span><span>Araucária</span><span>Mandirituba</span></div>
-          <div class="urgent-note cut-sm">Está fora das regiões listadas mas precisa de ajuda urgente? Fale conosco no WhatsApp para verificar disponibilidade de deslocamento imediato.</div>
+          <div class="urgent-note">Está fora das regiões listadas mas precisa de ajuda urgente? Fale conosco no WhatsApp para verificar disponibilidade de deslocamento imediato.</div>
         </aside>
       </div>
     </section>
-    <div class="zigzag-divider"></div>
 
     <section id="contato" class="cta">
       <div class="wrap">
-        <div class="cta-card cut-lg" data-reveal>
-          <span class="badge cut-sm"><span class="pulse-dot"></span>PRONTO PARA ATENDER AGORA</span>
+        <div class="cta-card" data-reveal>
+          <span class="badge"><span class="pulse-dot"></span>PRONTO PARA ATENDER AGORA</span>
           <h2>Problema elétrico não espera. <span>A gente também não.</span></h2>
           <p class="muted">Fale agora pelo WhatsApp e receba um diagnóstico rápido, sem compromisso.</p>
-          <a class="btn on-block primary" data-whatsapp target="_blank" rel="noreferrer">Chamar no WhatsApp agora</a>
+          <a class="btn primary" data-whatsapp target="_blank" rel="noreferrer">Chamar no WhatsApp agora</a>
           <div class="cta-info">
             <a href="tel:+5541999618109"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 6a3 3 0 0 1 2.83 2M13.5 2a7 7 0 0 1 6.5 6.5M20 16.5v2a1.5 1.5 0 0 1-1.63 1.5A17.5 17.5 0 0 1 3 4.63 1.5 1.5 0 0 1 4.5 3h2a1.5 1.5 0 0 1 1.5 1.29c.1.85.29 1.68.56 2.47a1.5 1.5 0 0 1-.34 1.58l-.83.83a12 12 0 0 0 5.5 5.5l.83-.83a1.5 1.5 0 0 1 1.58-.34c.79.27 1.62.46 2.47.56A1.5 1.5 0 0 1 20 16.5Z"/></svg>(41) 99961-8109</a>
             <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Plantão 24 horas, todos os dias</span>
@@ -227,7 +224,7 @@
 
   <div class="lightbox"><button class="btn ghost" data-close>Fechar</button><img src="" alt=""></div>
 
-  <a class="float-whatsapp cut-md" data-whatsapp target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp">
+  <a class="float-whatsapp" data-whatsapp target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.87 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.003A7.94 7.94 0 0 0 20 12a7.9 7.9 0 0 0-2.4-5.68Zm-5.55 12.2h-.003a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.67 6.62 6.62 0 0 1-6.53 6.62Zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.32-.1-.45.1-.13.2-.5.64-.62.77-.11.13-.23.14-.43.05-.2-.1-.83-.31-1.58-.98a5.9 5.9 0 0 1-1.1-1.36c-.11-.2 0-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.2.2-.33.06-.13.03-.24-.02-.34-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.62 0 .95.7 1.87.8 2 .1.13 1.36 2.07 3.28 2.9a11 11 0 0 0 1.1.41c.46.15.88.13 1.21.08.37-.06 1.17-.48 1.33-.94.17-.46.17-.85.12-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
   </a>
 
