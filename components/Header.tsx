@@ -45,7 +45,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-[1200px] items-center justify-between">
           <span className="flex items-center gap-1.5 text-gold-400">
             <Zap className="h-3 w-3 fill-gold-400 animate-pulse" />
-            <strong className="text-white font-bold">PLANTÃO 24H:</strong> {siteConfig.serviceArea} & Região
+            <strong className="text-white font-bold">PLANTÃO 24H:</strong> {siteConfig.serviceArea}
           </span>
           <span className="hidden sm:inline-block text-cyan-300">
             ⚡ ATENDIMENTO RÁPIDO DML // VOLTAGEM CONTROLADA
