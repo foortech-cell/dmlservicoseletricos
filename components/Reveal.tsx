@@ -23,7 +23,6 @@ export default function Reveal({
   const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    ensureGsapRegistered();
     const el = ref.current;
     if (!el) return;
 
@@ -32,27 +31,35 @@ export default function Reveal({
       return;
     }
 
-    const anim = gsap.fromTo(
-      el,
-      { opacity: 0, y },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        delay,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          toggleActions: "play none none none",
-          once: true,
+    // Defer GSAP/ScrollTrigger setup to the next frame so it never competes with the
+    // browser's first paint — dozens of Reveal instances all measuring layout in the
+    // same tick right after hydration is what caused the perceptible stutter on load.
+    let anim: gsap.core.Tween | undefined;
+    const raf = requestAnimationFrame(() => {
+      ensureGsapRegistered();
+      anim = gsap.fromTo(
+        el,
+        { opacity: 0, y },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play none none none",
+            once: true,
+          },
         },
-      },
-    );
+      );
+    });
 
     return () => {
-      anim.scrollTrigger?.kill();
-      anim.kill();
+      cancelAnimationFrame(raf);
+      anim?.scrollTrigger?.kill();
+      anim?.kill();
     };
   }, [delay, y]);
 

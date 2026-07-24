@@ -34,7 +34,7 @@ export default function Header() {
     }
 
     document.addEventListener("keydown", onKeyDown);
-    firstLinkRef.current?.focus();
+    firstLinkRef.current?.focus({ preventScroll: true });
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 

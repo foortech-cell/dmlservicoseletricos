@@ -75,18 +75,6 @@ export default function Hero() {
 
         <Reveal delay={0.15} y={28} className="relative flex justify-center">
           <ElectricBolt />
-          {/* Floating High-Voltage Badge */}
-          <div className="absolute bottom-6 -left-2 flex items-center gap-3.5 rounded-2xl border border-gold-400/40 bg-ink-900/90 px-5 py-3.5 shadow-[0_16px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl hud-corner-box">
-            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-brand shadow-[0_0_15px_rgba(241,186,24,0.5)]">
-              <Zap className="h-6 w-6 fill-ink-950 text-ink-950" aria-hidden="true" />
-            </span>
-            <span className="flex flex-col leading-tight">
-              <b className="font-display text-2xl font-black text-white">24h</b>
-              <span className="font-mono text-[11px] font-semibold tracking-wider text-gold-400 uppercase">
-                EMERGÊNCIA ELÉTRICA
-              </span>
-            </span>
-          </div>
         </Reveal>
       </div>
 

@@ -35,40 +35,48 @@ export function useScrollReveal<T extends HTMLElement>(
   const scope = useRef<T | null>(null);
 
   useEffect(() => {
-    ensureGsapRegistered();
     if (!scope.current) return;
 
-    const ctx = gsap.context(() => {
-      const targets = gsap.utils.toArray<HTMLElement>(selector);
-      if (!targets.length) return;
+    // Deferred to the next frame so this never competes with the browser's first
+    // paint/hydration — see the same fix in Reveal.tsx for why.
+    let ctx: gsap.Context | undefined;
+    const raf = requestAnimationFrame(() => {
+      ensureGsapRegistered();
+      ctx = gsap.context(() => {
+        const targets = gsap.utils.toArray<HTMLElement>(selector);
+        if (!targets.length) return;
 
-      if (prefersReducedMotion()) {
-        gsap.set(targets, { opacity: 1, y: 0 });
-        return;
-      }
+        if (prefersReducedMotion()) {
+          gsap.set(targets, { opacity: 1, y: 0 });
+          return;
+        }
 
-      targets.forEach((el, i) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: options?.y ?? 24 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            ease: "power2.out",
-            delay: (i % 6) * (options?.stagger ?? 0.08),
-            scrollTrigger: {
-              trigger: el,
-              start: "top 88%",
-              toggleActions: "play none none none",
-              once: true,
+        targets.forEach((el, i) => {
+          gsap.fromTo(
+            el,
+            { opacity: 0, y: options?.y ?? 24 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              ease: "power2.out",
+              delay: (i % 6) * (options?.stagger ?? 0.08),
+              scrollTrigger: {
+                trigger: el,
+                start: "top 88%",
+                toggleActions: "play none none none",
+                once: true,
+              },
             },
-          },
-        );
-      });
-    }, scope);
+          );
+        });
+      }, scope);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancelAnimationFrame(raf);
+      ctx?.revert();
+    };
   }, [selector, options?.y, options?.stagger]);
 
   return scope;
