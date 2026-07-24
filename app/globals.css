@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------- */
+/* DML design tokens — mirrors the Claude Design handoff (tokens/*.css)   */
+/* ---------------------------------------------------------------------- */
+:root {
+  --color-gold-50: #fff8e6;
+  --color-gold-100: #fdecc2;
+  --color-gold-200: #fade92;
+  --color-gold-300: #f6cd54;
+  --color-gold-400: #f1ba18;
+  --color-gold-500: #eda31a;
+  --color-gold-600: #d9891a;
+  --color-gold-700: #cc7b16;
+  --color-gold-800: #a6620f;
+  --color-gold-900: #7a480b;
+
+  --color-cyan-300: #7df9ff;
+  --color-cyan-400: #00f0ff;
+  --color-cyan-500: #00d2ff;
+  --color-cyan-600: #00a8e8;
+
+  --color-ink-50: #faf9f7;
+  --color-ink-100: #f2f0ec;
+  --color-ink-200: #e4e1da;
+  --color-ink-300: #cbc7bd;
+  --color-ink-400: #a5a093;
+  --color-ink-500: #7c776b;
+  --color-ink-600: #5a554b;
+  --color-ink-700: #3d3934;
+  --color-ink-800: #262320;
+  --color-ink-900: #17150f;
+  --color-ink-950: #0d0c09;
+
+  --gradient-brand: linear-gradient(160deg, #f1ba18 0%, #eda31a 45%, #cc7b16 100%);
+  --gradient-brand-h: linear-gradient(90deg, #f1ba18 0%, #cc7b16 100%);
+  --gradient-cyber: linear-gradient(135deg, #f1ba18 0%, #00f0ff 100%);
+  --gradient-cyber-glow: linear-gradient(90deg, #f1ba18 0%, #00f0ff 50%, #eda31a 100%);
+
+  --shadow-brand: 0 8px 24px rgba(204, 123, 22, 0.3);
+  --shadow-neon-gold: 0 0 25px rgba(241, 186, 24, 0.5);
+  --shadow-neon-cyan: 0 0 25px rgba(0, 240, 255, 0.5);
+
+  /* iOS Safari-safe viewport height (falls back to vh, upgraded to dvh below) */
+  --vh-full: 100vh;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --vh-full: 100dvh;
+  }
+}
+
+@theme inline {
+  --color-gold-50: var(--color-gold-50);
+  --color-gold-100: var(--color-gold-100);
+  --color-gold-200: var(--color-gold-200);
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
+  --color-gold-700: var(--color-gold-700);
+  --color-gold-800: var(--color-gold-800);
+  --color-gold-900: var(--color-gold-900);
+
+  --color-cyan-300: var(--color-cyan-300);
+  --color-cyan-400: var(--color-cyan-400);
+  --color-cyan-500: var(--color-cyan-500);
+  --color-cyan-600: var(--color-cyan-600);
+
+  --color-ink-50: var(--color-ink-50);
+  --color-ink-100: var(--color-ink-100);
+  --color-ink-200: var(--color-ink-200);
+  --color-ink-300: var(--color-ink-300);
+  --color-ink-400: var(--color-ink-400);
+  --color-ink-500: var(--color-ink-500);
+  --color-ink-600: var(--color-ink-600);
+  --color-ink-700: var(--color-ink-700);
+  --color-ink-800: var(--color-ink-800);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-950: var(--color-ink-950);
+
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-body: var(--font-manrope), "Manrope", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-brand: var(--shadow-brand);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent the iOS Safari horizontal-bounce that can hide fixed/sticky content */
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-ink-950);
+  color: var(--color-ink-100);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-gold-400);
+  color: var(--color-ink-950);
+}
+
+.text-gradient-brand {
+  background-image: var(--gradient-brand-h);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyber {
+  background-image: var(--gradient-cyber);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-brand {
+  background-image: var(--gradient-brand);
+}
+
+.bg-gradient-brand-h {
+  background-image: var(--gradient-brand-h);
+}
+
+.bg-gradient-cyber {
+  background-image: var(--gradient-cyber);
+}
+
+/* DML Signature Lightning Bolt Clip-Path */
+.clip-dml-bolt {
+  clip-path: polygon(62% 0, 8% 58%, 42% 58%, 33% 100%, 92% 37%, 55% 37%);
+}
+
+/* Glowing Neon drop-shadows for the DML Lightning Bolt */
+.glow-bolt-gold {
+  filter: drop-shadow(0 0 12px rgba(241, 186, 24, 0.75)) drop-shadow(0 0 28px rgba(237, 163, 26, 0.45));
+}
+
+.glow-bolt-cyber {
+  filter: drop-shadow(0 0 14px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 32px rgba(241, 186, 24, 0.55));
+}
+
+/* Cyber Glassmorphism Cards */
+.cyber-glass-panel {
+  background: rgba(23, 21, 15, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(241, 186, 24, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cyber-glass-panel:hover {
+  border-color: rgba(241, 186, 24, 0.5);
+  box-shadow: 0 16px 50px rgba(241, 186, 24, 0.15), 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+/* HUD Tech Framing & Bevel Corners */
+.hud-corner-box {
+  position: relative;
+}
+
+.hud-corner-box::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--color-gold-400);
+  border-left: 2px solid var(--color-gold-400);
+}
+
+.hud-corner-box::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--color-cyan-400);
+  border-right: 2px solid var(--color-cyan-400);
+}
+
+/* Overdrive Mode (Activated via toggle) */
+body.overdrive-mode {
+  --gradient-brand-h: linear-gradient(90deg, #00f0ff 0%, #f1ba18 50%, #00f0ff 100%);
+}
+
+body.overdrive-mode .glow-bolt-gold {
+  filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.9)) drop-shadow(0 0 36px rgba(241, 186, 24, 0.7));
+}
+
+body.overdrive-mode .cyber-glass-panel {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 240, 255, 0.2);
+}
+
+/* Pulse animation for high-voltage energy lines */
+@keyframes energyPulse {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0.2;
+  }
+}
+
+.animate-energy-pulse {
+  animation: energyPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Visible, high-contrast focus ring for keyboard navigation (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.h-screen-safe {
+  height: var(--vh-full);
+  min-height: 640px;
+}
+
+/* Reduced-motion escape hatch for anything animated purely via CSS/GSAP */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
